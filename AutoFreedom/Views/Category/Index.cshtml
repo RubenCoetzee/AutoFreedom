@@ -1,0 +1,17 @@
+﻿@model List<Category>
+
+<h2>Categories</h2>
+
+<div class="row">
+    @foreach (var category in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="@category.ImageUrl" class="card-img-top" alt="Store Image" style="height: 200px;">
+                <div class="card-body" style="height: 140px;">
+                    <h5 class="card-title">@category.Name</h5>
+                </div>
+            </div>
+        </div>
+    }
+</div>

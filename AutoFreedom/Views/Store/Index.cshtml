@@ -1,0 +1,19 @@
+﻿@model List<Store>
+
+<h2>Stores</h2>
+
+<div class="row">
+    @foreach (var store in Model)
+    {
+        <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="@store.ImageUrl" class="card-img-top" alt="Store Image" style="height: 200px;">
+            <div class="card-body" style="height: 140px;">
+                <h5 class="card-title">@store.Name</h5>
+                <p class="card-text">@store.Location</p>
+                <p class="card-text">@store.Description</p>
+            </div>
+        </div>
+        </div>
+    }
+</div>
