@@ -5,12 +5,14 @@
 <div class="row">
     @foreach (var category in Model)
     {
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img src="@category.ImageUrl" class="card-img-top" alt="Store Image" style="height: 200px;">
-                <div class="card-body" style="height: 140px;">
-                    <h5 class="card-title">@category.Name</h5>
-                </div>
+      @*Kyk na die code example hier onder om redirects te doen en dan om button op card te he*@
+
+        <div class="card" style="width: 18rem;">
+            <img src="@category.ImageUrl" class="card-img-top" alt="Store Image">
+            <div class="card-body">
+                <h5 class="card-title">@category.Name</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="@Url.Action("Index", "Home")"><span>Go Home</span></a>
             </div>
         </div>
     }
